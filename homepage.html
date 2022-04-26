@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
-    <link rel="preload" href="homepage.webp" as="image" />
+    <link rel="preload" href="background.webp" as="image" />
     <title>AEviso</title>
 </head>
 <style>
@@ -25,11 +25,11 @@
     }
 
     .main {
-        background-image: url("./homepage.webp");
+        background-image: url("./background.webp");
         background-color: #00000A;
         background-position: center;
         background-repeat: no-repeat;
-        background-size: 100%;
+        background-size: cover;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -38,23 +38,40 @@
 
     .title {
         width: 100%;
-        padding-top: 32%;
+        position: relative;
         text-align: center;
-        font-size: x-large;
+        font-size: normal;
     }
 
-    @media only screen and (max-width: 720px) {
+    .title-text {
+        position: relative;
+        top: 65%;
+    }
+
+    @media only screen and (min-width: 480px) {
         .title {
             font-size: large;
+        }
+    }
+
+    @media only screen and (min-width: 700px) {
+        .title {
+            font-size: x-large;
+        }
+    }
+
+    @media only screen and (min-width: 1700px) {
+        .main {
+            background-size: 100%;
         }
     }
 </style>
 
 <body>
     <div class="main">
-        <div class="title title-left">力景科技股份有限公司<br />AEviso Video Solution Co., Ltd.</div>
-        <div class="title title-right">景勳股份有限公司<br />AEviso DePro Solution Co., Ltd.<br />力景勳顥股份有限公司<br />AEviso
-            Technology Co., Ltd.</div>
+        <div class="title title-left"><span class="title-text">力景科技股份有限公司<br />AEviso Video Solution Co., Ltd.</span></div>
+        <div class="title title-right"><span class="title-text">景勳股份有限公司<br />AEviso DePro Solution Co., Ltd.<br />力景勳顥股份有限公司<br />AEviso
+            Technology Co., Ltd.</span></div>
     </div>
 </body>
 
